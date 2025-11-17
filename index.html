@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employement sepration form</title>
+</head>
+<body>
+    
+      <h2>Employment Separation Form</h2>
+
+      <div class="row">
+        <div class="field">
+          <label for="employeeName">Employee Name</label>
+          <input type="text" id="employeeName" name="employeeName" required />
+        </div>
+        <div class="field">
+          <label for="employeeId">Employee ID</label>
+          <input type="text" id="employeeId" name="employeeId" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="department">Department</label>
+          <input type="text" id="department" name="department" />
+        </div>
+        <div class="field">
+          <label for="managerName">Manager Name</label>
+          <input type="text" id="managerName" name="managerName" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="separationDate">Separation Date</label>
+          <input type="date" id="separationDate" name="separationDate" required />
+        </div>
+        <div class="field">
+          <label for="lastWorkingDay">Last Working Day</label>
+          <input type="date" id="lastWorkingDay" name="lastWorkingDay" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="reason">Reason for Separation</label>
+        <select id="reason" name="reason" required>
+          <option value="">Select reason</option>
+          <option value="resignation">Resignation</option>
+          <option value="termination">Termination</option>
+          <option value="contract-end">Contract End</option>
+          <option value="retirement">Retirement</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="checks">
+        <label>
+          <input type="checkbox" id="handoverComplete" name="handoverComplete" />
+          Company property returned / handover complete
+        </label>
+      </div>
+
+      <div class="field">
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Any notes or details..."></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="employeeSignature">Employee Signature</label>
+          <input type="text" id="employeeSignature" name="employeeSignature" placeholder="Type name as signature" />
+        </div>
+        <div class="field">
+          <label for="managerSignature">Manager Signature</label>
+          <input type="text" id="managerSignature" name="managerSignature" placeholder="Type name as signature" />
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </chp-form>
+
+  <script>
+    // Optional: basic submit handler
+    document.getElementById('empSeparation').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      console.log('Separation form data:', data);
+      alert('Form submitted!');
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
